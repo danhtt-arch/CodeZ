@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeZ Academy - Nền tảng học lập trình trực tuyến</title>
+  <meta name="description" content="CodeZ Academy - Học lập trình từ cơ bản đến nâng cao, theo lộ trình rõ ràng và dự án thực chiến." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="js/tailwind-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body data-page="home" class="bg-white font-body text-ink-soft antialiased">
+
+  <!-- ================= NAVBAR ================= -->
+  <div id="site-header"></div>
+
+  <main>
+    <!-- ================= HERO BANNER ================= -->
+    <section class="relative overflow-hidden bg-surface">
+      <!-- họa tiết nền -->
+      <div class="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue-200/40 blur-3xl"></div>
+      <div class="pointer-events-none absolute -bottom-40 -left-24 h-96 w-96 rounded-full bg-sky-200/40 blur-3xl"></div>
+
+      <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 md:py-24 lg:grid-cols-2 lg:px-8">
+        <!-- Nội dung -->
+        <div>
+          <span class="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-3 py-1 text-sm font-medium text-primary">
+            <span class="h-2 w-2 rounded-full bg-primary"></span>
+            Nền tảng học lập trình trực tuyến
+          </span>
+
+          <h1 class="mt-6 font-heading text-4xl font-extrabold leading-tight text-ink sm:text-5xl">
+            Bắt đầu hành trình trở thành
+            <span class="text-primary">Lập trình viên chuyên nghiệp</span>
+          </h1>
+
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">
+            Học lập trình từ con số 0 đến thực chiến với lộ trình rõ ràng, bài giảng dễ hiểu
+            và dự án thực tế. Tự học theo tốc độ của bạn, theo dõi tiến độ mỗi ngày.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#khoa-hoc" class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-7 py-3.5 font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-primary-light">
+              Khám phá khóa học
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#video" class="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-7 py-3.5 font-semibold text-ink transition hover:border-primary hover:text-primary">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              Xem video giới thiệu
+            </a>
+          </div>
+
+          <ul class="mt-10 grid gap-4 text-sm font-medium text-ink sm:grid-cols-3">
+            <li class="flex items-center gap-2">
+              <svg class="h-5 w-5 shrink-0 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Lộ trình bài bản
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="h-5 w-5 shrink-0 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Dự án thực chiến
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="h-5 w-5 shrink-0 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Cấp chứng chỉ
+            </li>
+          </ul>
+        </div>
+
+        <!-- Minh họa: cửa sổ code -->
+        <div class="relative mx-auto w-full max-w-lg" aria-hidden="true">
+          <div class="overflow-hidden rounded-2xl bg-ink shadow-2xl shadow-blue-900/20 ring-1 ring-slate-900/10">
+            <div class="flex items-center gap-2 border-b border-white/10 px-4 py-3">
+              <span class="h-3 w-3 rounded-full bg-red-400"></span>
+              <span class="h-3 w-3 rounded-full bg-yellow-400"></span>
+              <span class="h-3 w-3 rounded-full bg-green-400"></span>
+              <span class="ml-3 font-mono text-xs text-slate-400">hanh-trinh.js</span>
+            </div>
+            <pre class="overflow-x-auto p-6 font-mono text-sm leading-7 text-slate-300"><code><span class="text-sky-400">const</span> hocVien = {
+  ten: <span class="text-emerald-300">'Bạn'</span>,
+  mucTieu: <span class="text-emerald-300">'Lập trình viên'</span>,
+};
+
+<span class="text-sky-400">function</span> <span class="text-yellow-300">batDau</span>(lopHoc) {
+  <span class="text-sky-400">return</span> lopHoc
+    .<span class="text-yellow-300">hoc</span>(<span class="text-emerald-300">'Frontend'</span>)
+    .<span class="text-yellow-300">thucHanh</span>(<span class="text-emerald-300">'Dự án'</span>)
+    .<span class="text-yellow-300">tiepTuc</span>();
+}
+
+<span class="text-yellow-300">batDau</span>(<span class="text-sky-400">CodeZ</span>); <span class="text-slate-500">// 🚀 Let's code!</span></code></pre>
+          </div>
+          <div class="absolute -bottom-6 -left-4 hidden rounded-xl bg-white px-4 py-3 shadow-xl ring-1 ring-slate-200 sm:block">
+            <p class="text-xs text-slate-500">Tiến độ tuần này</p>
+            <div class="mt-2 h-2 w-40 rounded-full bg-slate-100">
+              <div class="h-2 w-3/4 rounded-full bg-primary"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIDEO GIỚI THIỆU ================= -->
+    <section id="video" class="scroll-mt-16 bg-white py-16 md:py-24">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="font-semibold uppercase tracking-wider text-primary">Video giới thiệu</p>
+          <h2 class="mt-2 font-heading text-3xl font-bold text-ink sm:text-4xl">Học lập trình cùng CodeZ Academy</h2>
+          <p class="mt-4 text-slate-600">Xem thử một bài học để cảm nhận cách giảng dạy trực quan, dễ hiểu và bám sát thực tế.</p>
+        </div>
+
+        <div class="mt-10 overflow-hidden rounded-2xl bg-ink shadow-2xl shadow-slate-900/10 ring-1 ring-slate-200">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/PkZNo7MFNFg"
+              title="CodeZ Academy Intro"
+              frameborder="0"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KHÓA HỌC NỔI BẬT (đọc từ Supabase) ================= -->
+    <section id="khoa-hoc" class="scroll-mt-16 bg-surface py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p class="font-semibold uppercase tracking-wider text-primary">Khóa học nổi bật</p>
+            <h2 class="mt-2 font-heading text-3xl font-bold text-ink sm:text-4xl">Bắt đầu với khóa học phù hợp</h2>
+          </div>
+          <a href="detail.html" class="font-semibold text-primary hover:underline">Xem tất cả khóa học →</a>
+        </div>
+
+        <div id="featured-state" class="mt-10"></div>
+        <div id="featured-grid" class="mt-10 hidden grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div id="site-footer"></div>
+
+  <script src="js/app.js"></script>
+  <script>
+    const { db, esc, courseCard, bindCoverFallback } = CodeZ;
+
+    // READ: lấy tối đa 3 khóa học đầu tiên từ bảng "courses" để làm khóa học nổi bật
+    async function loadFeatured() {
+      const state = document.getElementById('featured-state');
+      const grid = document.getElementById('featured-grid');
+      state.classList.remove('hidden');
+      grid.classList.add('hidden');
+      state.innerHTML = `<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">${'<div class="animate-pulse overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200"><div class="h-44 bg-slate-200"></div><div class="space-y-3 p-6"><div class="h-5 w-3/4 rounded bg-slate-200"></div><div class="h-4 w-full rounded bg-slate-200"></div></div></div>'.repeat(3)}</div>`;
+
+      try {
+        const { data, error } = await db
+          .from('courses')
+          .select('id, title, description, price, image_url')
+          .order('id', { ascending: true })
+          .limit(3);
+        if (error) throw error;
+
+        if (!data || data.length === 0) {
+          state.innerHTML = '<div class="rounded-2xl border border-dashed border-slate-300 bg-white p-10 text-center"><p class="font-heading text-lg font-bold text-ink">Khóa học đang được cập nhật</p><p class="mt-2 text-sm text-slate-600">Vui lòng quay lại sau.</p></div>';
+          return;
+        }
+
+        state.classList.add('hidden');
+        grid.innerHTML = data.map((c) => courseCard(c, 'link')).join('');
+        bindCoverFallback(grid);
+        grid.classList.remove('hidden');
+      } catch (err) {
+        console.error('[READ featured courses]', err);
+        state.innerHTML = `<div class="rounded-2xl border border-red-200 bg-red-50 p-8 text-center"><p class="font-heading text-lg font-bold text-red-800">Không tải được khóa học</p><p class="mt-2 text-sm text-red-700">${esc(err.message)}</p><button id="retry-btn" type="button" class="mt-5 rounded-lg bg-red-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-red-700">Thử lại</button></div>`;
+        document.getElementById('retry-btn').addEventListener('click', loadFeatured);
+      }
+    }
+    loadFeatured();
+  </script>
+</body>
+</html>

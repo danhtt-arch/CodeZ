@@ -1,0 +1,5 @@
+Project name:	CodeZ
+Database password:	RWq0sxUbzOd7p3Bw
+URL:	https://swgqjirufusmoiulhxco.supabase.co
+Publishable key:	sb_publishable_zLom1yn76SqfhG__NSKFaw_9TWBxtdI
+anon:	eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN3Z3FqaXJ1ZnVzbW9pdWxoeGNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE3NDgzNDcsImV4cCI6MjEwNzMyNDM0N30.xKKuJOFsF7W9NIzZnhm742hx3_VGGAaDGrOHvpKevzE

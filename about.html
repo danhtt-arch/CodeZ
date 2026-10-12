@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Về Chúng Tôi - CodeZ Academy</title>
+  <meta name="description" content="Tìm hiểu câu chuyện, tầm nhìn, sứ mệnh và đội ngũ giảng viên của CodeZ Academy." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="js/tailwind-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body data-page="about" class="bg-white font-body text-ink-soft antialiased">
+
+  <!-- ================= NAVBAR ================= -->
+  <div id="site-header"></div>
+
+  <main>
+    <!-- ================= PAGE HEADER ================= -->
+    <section class="relative overflow-hidden bg-surface">
+      <div class="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue-200/40 blur-3xl"></div>
+      <div class="pointer-events-none absolute -bottom-40 -left-24 h-96 w-96 rounded-full bg-sky-200/40 blur-3xl"></div>
+
+      <div class="relative mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 md:py-24 lg:px-8">
+        <nav aria-label="Breadcrumb" class="text-sm text-slate-500">
+          <a href="index.html" class="hover:text-primary">Trang chủ</a>
+          <span class="mx-2">&gt;</span>
+          <span class="font-medium text-ink">Về chúng tôi</span>
+        </nav>
+        <h1 class="mt-6 font-heading text-4xl font-extrabold leading-tight text-ink sm:text-5xl">
+          Chúng tôi giúp bạn <span class="text-primary">viết nên tương lai</span> bằng code
+        </h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
+          CodeZ Academy là học viện lập trình trực tuyến, nơi mọi người, dù là sinh viên, người đi làm hay lập trình viên lâu năm, đều có thể học đúng thứ cần học và làm được việc thật.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= CÂU CHUYỆN THƯƠNG HIỆU ================= -->
+    <section class="bg-white py-16 md:py-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+        <!-- Hình minh họa đội ngũ -->
+        <div class="relative order-2 lg:order-1">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex aspect-[4/5] items-end rounded-2xl bg-gradient-to-br from-primary to-sky-400 p-5">
+              <p class="font-heading text-xl font-bold leading-snug text-white">Học để làm,<br />không chỉ để biết.</p>
+            </div>
+            <div class="mt-10 grid gap-4">
+              <div class="flex aspect-square items-center justify-center rounded-2xl bg-ink">
+                <span class="font-mono text-3xl font-bold text-sky-300">&lt;/&gt;</span>
+              </div>
+              <div class="flex aspect-square flex-col items-center justify-center rounded-2xl bg-blue-50 ring-1 ring-blue-100">
+                <span class="font-heading text-4xl font-extrabold text-primary">2026</span>
+                <span class="mt-1 text-sm font-medium text-slate-600">Năm thành lập</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <p class="font-semibold uppercase tracking-wider text-primary">Câu chuyện thương hiệu</p>
+          <h2 class="mt-2 font-heading text-3xl font-bold text-ink sm:text-4xl">Từ một câu hỏi: "Học lập trình thế nào cho đúng?"</h2>
+          <div class="mt-6 space-y-4 leading-relaxed text-slate-600">
+            <p>
+              CodeZ Academy bắt đầu từ những người làm nghề: những lập trình viên đã chứng kiến quá nhiều bạn trẻ bỏ cuộc giữa chừng vì tài liệu rời rạc, lộ trình mơ hồ và thiếu người đồng hành.
+            </p>
+            <p>
+              Chúng tôi xây dựng CodeZ để giải quyết điều đó: một nơi có lộ trình rõ ràng từ cơ bản đến nâng cao, bài giảng ngắn gọn dễ hiểu, và dự án thực chiến giúp người học tự tin bước vào môi trường làm việc thật.
+            </p>
+            <p>
+              Cái tên <strong class="text-ink">CodeZ</strong> mang theo khát vọng của một thế hệ lập trình viên mới: <em>Innovate &amp; Grow</em>, luôn đổi mới và không ngừng lớn lên.
+            </p>
+          </div>
+
+          <dl class="mt-8 grid grid-cols-3 gap-4 border-t border-slate-200 pt-8">
+            <div>
+              <dt class="text-sm text-slate-500">Học viên mục tiêu</dt>
+              <dd class="mt-1 font-heading text-2xl font-extrabold text-primary">1.000+</dd>
+            </div>
+            <div>
+              <dt class="text-sm text-slate-500">Lĩnh vực</dt>
+              <dd class="mt-1 font-heading text-2xl font-extrabold text-primary">Web · Mobile</dd>
+            </div>
+            <div>
+              <dt class="text-sm text-slate-500">Hình thức</dt>
+              <dd class="mt-1 font-heading text-2xl font-extrabold text-primary">100% online</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TẦM NHÌN & SỨ MỆNH ================= -->
+    <section class="bg-surface py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="font-semibold uppercase tracking-wider text-primary">Định hướng phát triển</p>
+          <h2 class="mt-2 font-heading text-3xl font-bold text-ink sm:text-4xl">Tầm nhìn &amp; Sứ mệnh</h2>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2">
+          <!-- Tầm nhìn -->
+          <article class="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-primary">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="mt-5 font-heading text-xl font-bold text-ink">Tầm nhìn</h3>
+            <p class="mt-3 leading-relaxed text-slate-600">
+              Trở thành nền tảng học lập trình trực tuyến đáng tin cậy hàng đầu tại Việt Nam, nơi mọi người đều có cơ hội tiếp cận tri thức công nghệ chất lượng cao, bất kể xuất phát điểm hay nơi sinh sống.
+            </p>
+          </article>
+
+          <!-- Sứ mệnh -->
+          <article class="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-primary">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+            </div>
+            <h3 class="mt-5 font-heading text-xl font-bold text-ink">Sứ mệnh</h3>
+            <p class="mt-3 leading-relaxed text-slate-600">
+              Đồng hành cùng người học trên từng bước của hành trình trở thành lập trình viên chuyên nghiệp: lộ trình bài bản, giảng viên giàu kinh nghiệm và các dự án thực chiến giúp xây dựng kỹ năng làm việc thật.
+            </p>
+          </article>
+        </div>
+
+        <!-- Giá trị cốt lõi -->
+        <ul class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="rounded-2xl bg-white p-6 ring-1 ring-slate-200">
+            <h4 class="font-heading font-bold text-ink">Dễ tiếp cận</h4>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Giao diện thân thiện, nội dung rõ ràng, học ở bất kỳ đâu.</p>
+          </li>
+          <li class="rounded-2xl bg-white p-6 ring-1 ring-slate-200">
+            <h4 class="font-heading font-bold text-ink">Thực chiến</h4>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Học đi đôi với hành qua dự án sát với nhu cầu doanh nghiệp.</p>
+          </li>
+          <li class="rounded-2xl bg-white p-6 ring-1 ring-slate-200">
+            <h4 class="font-heading font-bold text-ink">Chất lượng</h4>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Giáo trình được chọn lọc và cập nhật cùng xu hướng công nghệ.</p>
+          </li>
+          <li class="rounded-2xl bg-white p-6 ring-1 ring-slate-200">
+            <h4 class="font-heading font-bold text-ink">Đồng hành</h4>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Theo dõi tiến độ và được hỗ trợ khi gặp khó khăn.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= ĐỘI NGŨ GIẢNG VIÊN ================= -->
+    <section class="bg-white py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="font-semibold uppercase tracking-wider text-primary">Đội ngũ</p>
+          <h2 class="mt-2 font-heading text-3xl font-bold text-ink sm:text-4xl">Giảng viên của CodeZ</h2>
+          <p class="mt-4 text-slate-600">Những người làm nghề thực thụ, truyền đạt bằng kinh nghiệm thật.</p>
+        </div>
+
+        <ul class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="text-center">
+            <div class="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-primary to-sky-400 font-heading text-3xl font-bold text-white ring-4 ring-blue-50">NA</div>
+            <h3 class="mt-5 font-heading text-lg font-bold text-ink">Nguyễn Minh Anh</h3>
+            <p class="text-sm font-medium text-primary">Senior Frontend Engineer</p>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">8 năm xây dựng sản phẩm web cho các công ty công nghệ và startup.</p>
+          </li>
+          <li class="text-center">
+            <div class="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-teal-400 font-heading text-3xl font-bold text-white ring-4 ring-emerald-50">TB</div>
+            <h3 class="mt-5 font-heading text-lg font-bold text-ink">Trần Quốc Bảo</h3>
+            <p class="text-sm font-medium text-primary">Full-stack Developer</p>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Chuyên JavaScript, từng dẫn dắt nhiều đội dự án thương mại điện tử.</p>
+          </li>
+          <li class="text-center">
+            <div class="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-400 font-heading text-3xl font-bold text-white ring-4 ring-violet-50">LH</div>
+            <h3 class="mt-5 font-heading text-lg font-bold text-ink">Lê Thu Hà</h3>
+            <p class="text-sm font-medium text-primary">Backend Architect</p>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">10 năm thiết kế hệ thống API và cơ sở dữ liệu quy mô lớn.</p>
+          </li>
+          <li class="text-center">
+            <div class="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-orange-500 font-heading text-3xl font-bold text-white ring-4 ring-amber-50">PD</div>
+            <h3 class="mt-5 font-heading text-lg font-bold text-ink">Phạm Đức Duy</h3>
+            <p class="text-sm font-medium text-primary">Mobile Engineer</p>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Phát triển ứng dụng iOS/Android, đam mê chia sẻ cho người mới.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= LIÊN HỆ & BẢN ĐỒ ================= -->
+    <section id="lien-he" class="scroll-mt-16 bg-surface py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="font-semibold uppercase tracking-wider text-primary">Liên hệ</p>
+          <h2 class="mt-2 font-heading text-3xl font-bold text-ink sm:text-4xl">Ghé thăm văn phòng CodeZ</h2>
+        </div>
+
+        <div class="mt-12 grid gap-8 lg:grid-cols-3">
+          <!-- Thông tin liên hệ -->
+          <address class="space-y-6 not-italic lg:col-span-1">
+            <div class="flex gap-4">
+              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11a7 7 0 1114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              </div>
+              <div>
+                <h3 class="font-heading font-bold text-ink">Địa chỉ</h3>
+                <p class="mt-1 text-slate-600">Landmark 81, 720A Điện Biên Phủ, Phường 22, Bình Thạnh, TP. Hồ Chí Minh</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.3a1 1 0 01.95.68l1.1 3.3a1 1 0 01-.5 1.2L7.2 9.3a11 11 0 007.5 7.5l1.1-1.65a1 1 0 011.2-.5l3.3 1.1a1 1 0 01.7.95V19a2 2 0 01-2 2h-1C9.7 21 3 14.3 3 6V5z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-heading font-bold text-ink">Điện thoại</h3>
+                <p class="mt-1"><a href="tel:0123456789" class="text-slate-600 hover:text-primary">0123 456 789</a></p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-heading font-bold text-ink">Email</h3>
+                <p class="mt-1"><a href="mailto:contact@codezacademy.vn" class="text-slate-600 hover:text-primary">contact@codezacademy.vn</a></p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 2"/></svg>
+              </div>
+              <div>
+                <h3 class="font-heading font-bold text-ink">Giờ làm việc</h3>
+                <p class="mt-1 text-slate-600">Thứ 2 – Thứ 6: 8:30 – 17:30</p>
+              </div>
+            </div>
+          </address>
+
+          <!-- Google Map -->
+          <div class="overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-200 lg:col-span-2">
+            <div class="map-container">
+              <iframe
+                src="https://maps.google.com/maps?q=Landmark%2081%2C%20720A%20%C4%90i%E1%BB%87n%20Bi%C3%AAn%20Ph%E1%BB%A7%2C%20B%C3%ACnh%20Th%E1%BA%A1nh%2C%20TP.%20H%E1%BB%93%20Ch%C3%AD%20Minh&z=16&hl=vi&output=embed"
+                title="Bản đồ văn phòng CodeZ Academy"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="bg-primary">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 py-12 text-center sm:px-6 md:flex-row md:text-left lg:px-8">
+        <div>
+          <h2 class="font-heading text-2xl font-bold text-white sm:text-3xl">Sẵn sàng bắt đầu hành trình cùng CodeZ?</h2>
+          <p class="mt-2 text-blue-100">Khám phá các khóa học và chọn lộ trình phù hợp với bạn.</p>
+        </div>
+        <a href="detail.html" class="shrink-0 rounded-lg bg-white px-7 py-3.5 font-semibold text-primary shadow-lg transition hover:bg-blue-50">Khám phá khóa học</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div id="site-footer"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

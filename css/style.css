@@ -1,0 +1,73 @@
+/* CodeZ Academy - CSS dùng chung (phần còn lại dùng Tailwind) */
+
+/* File logo có nền sáng và nhiều khoảng trống: cắt vùng chứa biểu tượng + chữ */
+.logo-crop {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 52px;
+  width: 120px;
+}
+.logo-crop img {
+  position: absolute;
+  height: 113px;
+  max-width: none;
+  left: -43px;
+  top: -31px;
+  mix-blend-mode: multiply; /* hòa nền xám nhạt của logo vào nền trắng */
+}
+
+/* Mục menu đang được chọn */
+.nav-link.active { color: #0056D2; }
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 2px;
+  border-radius: 2px;
+  background: #0056D2;
+}
+
+/* Ô nhập liệu dùng chung */
+.field {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  padding: 0.7rem 0.9rem;
+  color: #0F172A;
+  transition: border-color .15s, box-shadow .15s;
+}
+.field:focus {
+  outline: none;
+  border-color: #2563EB;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, .2);
+}
+.field::placeholder { color: #94a3b8; }
+
+/* Khung video YouTube 16:9 */
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Khung Google Map responsive */
+.map-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 320px;
+}
+.map-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
