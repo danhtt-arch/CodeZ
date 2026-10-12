@@ -277,6 +277,11 @@
 
         if (error) throw error;
 
+        // Dòng đã được ghi nhưng không có id: cột id trong DB chưa tự tăng
+        if (data.id === null || data.id === undefined) {
+          throw new Error('Đăng ký đã được ghi nhưng database chưa tạo được Mã ID (cột id chưa tự tăng). Hãy chạy lại file supabase-setup.sql trong Supabase SQL Editor.');
+        }
+
         const course = courses.find((c) => String(c.id) === String(courseValue));
         showMessage(result, 'success', `
           <p class="font-semibold">🎉 Đăng ký thành công!</p>

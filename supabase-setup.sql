@@ -20,6 +20,49 @@ create table if not exists public.registrations (
   created_at   timestamptz not null default now()
 );
 
+-- 1b. Sửa bảng registrations ĐÃ TẠO SẴN từ trước (nếu bảng mới tạo ở trên thì các khối
+--     này không làm gì).
+
+-- (a) Cột id phải tự tăng + là khóa chính. Nếu trước đây id không có giá trị mặc định
+--     thì dòng mới sẽ có id = NULL (nên không sinh được Mã ID đăng ký).
+do $$
+begin
+  if exists (select 1 from information_schema.columns
+             where table_schema = 'public' and table_name = 'registrations'
+               and column_name = 'id' and column_default is null and is_identity = 'NO') then
+    create sequence if not exists public.registrations_id_seq;
+    alter sequence public.registrations_id_seq owned by public.registrations.id;
+    perform setval('public.registrations_id_seq',
+                   (select coalesce(max(id), 0) from public.registrations) + 1, false);
+    -- Gán id cho các dòng đang bị NULL
+    update public.registrations set id = nextval('public.registrations_id_seq') where id is null;
+    alter table public.registrations alter column id set default nextval('public.registrations_id_seq');
+    alter table public.registrations alter column id set not null;
+  end if;
+
+  if not exists (select 1 from pg_constraint
+                 where conrelid = 'public.registrations'::regclass and contype = 'p') then
+    alter table public.registrations add primary key (id);
+  end if;
+end $$;
+
+-- (b) Số điện thoại phải là chữ (text), nếu là số thì mất số 0 ở đầu (0981660756 -> 981660756).
+--     Các số đã lưu bị mất số 0 (ngắn hơn 10 chữ số) được thêm lại số 0.
+do $$
+begin
+  if exists (select 1 from information_schema.columns
+             where table_schema = 'public' and table_name = 'registrations'
+               and column_name = 'phone' and data_type <> 'text') then
+    alter table public.registrations alter column phone type text
+      using (case when length(phone::text) < 10 then lpad(phone::text, 10, '0') else phone::text end);
+  end if;
+end $$;
+
+-- (c) Các cột bổ sung.
+-- Thời điểm đăng ký (dùng để sắp xếp "Khóa học của tôi")
+alter table public.registrations
+  add column if not exists created_at timestamptz not null default now();
+
 -- Gắn đăng ký với tài khoản đăng nhập (để có mục "Khóa học của tôi").
 -- NULL = đăng ký ẩn danh (không cần tài khoản).
 alter table public.registrations
